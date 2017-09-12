@@ -9,8 +9,8 @@ JavaScript is the most used language today, and there is no escaping it. Learn t
 This lesson is oriented around teaching you how to use Javascript client-side in the browser. In order to get the most out of the lesson it helps if you have some past experience with web technologies such as HTML and HTTP.
 
 ## What you need
-- A browser: [Chrome](https://www.google.com/chrome)
-- A code editor: [Atom](https://atom.io/)
+- Chrome: [Chrome](https://www.google.com/chrome)
+- Atom: [Atom](https://atom.io/)
 
 ## How to get started
 
