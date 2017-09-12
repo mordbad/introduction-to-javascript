@@ -6,18 +6,21 @@ You will learn how to:
  2. Create "Hello world"
  3. Make your code interact with the web page
 
-## 1. Dev environment
+## Required software and tools for this exercise
 
-> **Before you begin**: Please make sure that you have the following installed:
+> :exclamation: **Before you begin:** Please make sure that you have the following installed:
 -  Google Chrome: [https://www.google.com/chrome](https://www.google.com/chrome)
 -  Atom: https://atom.io/
 
-* Open `exercise1.html` both in Chrome and Atom. Make sure changes to the HTML file are reflected in the browser.
+## 1.1 Dev environment
 
-## 2. "Hello world"
+:pencil2: Open `exercise1.html` both in Chrome and Atom. Make sure changes to the HTML file are reflected in the browser.
 
-To make our example web page run JavaScript we need to add a `<script>` element.
-* Add the following `<script>` element just before the closing `</head>` element:
+## 1.2 "Hello world"
+
+:book: To make our example web page run JavaScript we need to add a `<script>` element.
+
+:pencil2: Add the following `<script>` element just before the closing `</head>` element:
 
 ```html
 <script>
@@ -25,17 +28,17 @@ To make our example web page run JavaScript we need to add a `<script>` element.
 </script>
 ```
 
-* Refresh your page (hit `F5` or `CTRL+R`/ `CMD+R`).
+:pencil2: Refresh your page (hit <kbd>F5</kbd> or <kbd>CTRL</kbd> + <kbd>R</kbd> / <kbd>CMD</kbd> + <kbd>R</kbd>).
 
-The result should be a box popping up saying 'Hello world!'. How exciting!
+:book: The result should be a box popping up saying 'Hello world!'. How exciting!
 
 ![](../exercise-1_2.png)
 
-> **Note:** Declaring scripts directly in HTML inside a `<script>`-tag is not good considered good practice, in later exercises we will be doing all coding inside external `.js` files loaded into the page.
+> :poop: **Note:** Declaring scripts directly in HTML inside a `<script>`-tag is not good considered good practice, in later exercises we will be doing all coding inside external `.js` files loaded into the page.
 
-## 3. Interacting with the DOM
+## 1.3 Interacting with the DOM
 
-All browsers supply an API called the DOM (Document Object Model). The DOM API gives developers access to manipulate the web page markup dynamically via a tree structure called the _DOM tree_. Each HTML element in the web page is represented as a node in the tree.
+:book: All browsers supply an API called the DOM (Document Object Model). The DOM API gives developers access to manipulate the web page markup dynamically via a tree structure called the _DOM tree_. Each HTML element in the web page is represented as a node in the tree.
 
 This is what the DOM structure of `exercise1.html` looks like:
 
