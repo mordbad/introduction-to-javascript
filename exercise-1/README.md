@@ -44,23 +44,23 @@ This is what the DOM structure of `exercise1.html` looks like:
 
 ![](../exercise-1_3-1.png)
 
-We are going to use a DOM API method called `querySelector` to replace some text in the web page, but we need to think about the order we do things.
+:book: We are going to use a DOM API method called `querySelector` to replace some text in the web page, but we need to think about the order we do things.
 
-* Replace the contents of the `<script>` element we created in the last example with the following code:
+:pencil2: Replace the contents of the `<script>` element we created in the last example with the following code:
 
 ```javascript
 var paragraph = document.querySelector('p');
 paragraph.innerHTML = 'Hello Nerdschool';
 ```
 
-* Refresh the page (hit `F5` or `CTRL+R`/ `CMD+R`).
+:pencil2: Refresh the page (hit <kbd>F5</kbd> or <kbd>CTRL</kbd> + <kbd>R</kbd> / <kbd>CMD</kbd> + <kbd>R</kbd>).
 
-Apparently nothing happened so it's time to take on our CSI hat.
+:book: Apparently nothing happened so it's time to take on our CSI hat.
 
-* Open the Chrome Dev Tools by doing one of the following:
+:pencil2: Open the Chrome Dev Tools by doing one of the following:
   - Select **More Tools > Developer Tools** from the Chrome Menu.
   - Right-click on a page element and select Inspect
-  - Use the keyboard shortcuts `Ctrl+Shift+I` (Windows) or `Cmd+Opt+I` (Mac)
+  - Use the keyboard shortcuts <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> (Windows) or <kbd>Cmd</kbd >+ <kbd>Opt</kbd> + <kbd>I</kbd> (Mac)
 *  Go to the Console panel. (Don't worry about all the other buttons and panels, we will revisit DevTools in the next exercise.)
 * Refresh the page again.
 
@@ -68,29 +68,29 @@ Apparently nothing happened so it's time to take on our CSI hat.
 exercise1.html:13 Uncaught TypeError: Cannot set property 'innerHTML' of null
 ```
 
-Looks like we're trying to set `innerHTML` on something that's `null`. It's not to hard to take a guess based on our code what the `null` thing is, but let's explore another debug tool while we're at it.
+:book: Looks like we're trying to set `innerHTML` on something that's `null`. It's not to hard to take a guess based on our code what the `null` thing is, but let's explore another debug tool while we're at it.
 
-* Between the two existing lines, add the following:
+:pencil2: Between the two existing lines, add the following:
 
 ~~~~javascript
 console.log('The current paragraph is:', paragraph);
 ~~~~
 
-* Refresh the page with the Console panel in DevTools still open.
+:pencil2: Refresh the page with the Console panel in DevTools still open.
 
 ~~~~
 The current paragraph is: null
 ~~~~
 
-Well we already knew that, but becoming comfortable with `console.log()` is crucial. This is one of your primary tools of inspecting what's going on at runtime.
+:book: Well we already knew that, but becoming comfortable with `console.log()` is crucial. This is one of your primary tools of inspecting what's going on at runtime.
 
-Ok so back to our problem of a null paragraph. Can you guess why this is happening?
+Ok, so back to our problem of a null paragraph. Can you guess why this is happening?
 
 No really, think about it a few second.
 
 The DOM is read sequentially from top to bottom. As the code is now, our `<script></script>` block is executed before anything in the `<body>` is even read initially. So when we try to find a `<p>` element, none exists because the parser haven't found it yet.
 
-* Make sure your `<script>` element is located below the `<p>` (paragraph) element. (Hint: the `<script>` block can live inside of the `<body>`).
+:pencil2: Make sure your `<script>` element is located below the `<p>` (paragraph) element. (Hint: the `<script>` block can live inside of the `<body>`).
 
 * Refresh your page. The result should be the text 'Hello Nerdschool' displaying in the paragraph below the heading.
 
