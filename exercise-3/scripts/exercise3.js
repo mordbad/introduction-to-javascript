@@ -37,8 +37,8 @@ var info = document.querySelector('body');
 function presentMyself(input){
   var output ='';
   info.innerHTML="Test"
-  var template = "Hello, my name is {name}. Im {age} years old and my favorite" +
-   "movies are {LEAST-liked-move} which is directed by {director} and stars {star},"+
+  var template = "Hello, my name is" + input.name +". Im "+ input.age +" years old and my favorite" +
+   "movies are "+input.thingiverse[input.thingiverse.length-1].name+" {LEAST-liked-move} which is directed by {director} and stars {star},"+
 
    "{medium-liked-movie} which is directed by {director} and stars {star},"+
    " and {MOST-liked-movie} which is directed by {director} and stars {star}."
